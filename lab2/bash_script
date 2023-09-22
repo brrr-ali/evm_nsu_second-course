@@ -1,0 +1,49 @@
+#!/bin/bash
+(echo "O0") &>> output200000.txt
+for (( i=1; i <= 5; i++ ))
+do
+(time ./main0) &>> output200000.txt
+echo "number is $i"
+done
+
+(echo "O1") &>> output200000.txt
+for (( i=1; i <= 5; i++ ))
+do
+(time ./main1) &>> output200000.txt
+echo "number is $i"
+done
+
+(echo "O2") &>> output200000.txt
+for (( i=1; i <= 5; i++ ))
+do
+(time ./main2) &>> output200000.txt
+echo "number is $i"
+done
+
+(echo "O3") &>> output200000.txt
+for (( i=1; i <= 5; i++ ))
+do
+(time ./main3) &>> output200000.txt
+echo "number is $i"
+done
+
+(echo "Os") &>> output200000.txt
+for (( i=1; i <= 5; i++ ))
+do
+(time ./mains) &>> output200000.txt
+echo "number is $i"
+done
+
+(echo "Ofast") &>> output200000.txt
+for (( i=1; i <= 5; i++ ))
+do
+(time ./mainfast) &>> output200000.txt
+echo "number is $i"
+done
+
+(echo "Og") &>> output200000.txt
+for (( i=1; i <= 5; i++ ))
+do
+(time ./maing) &>> output200000.txt
+echo "number is $i"
+done
